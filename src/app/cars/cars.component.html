@@ -1,7 +1,12 @@
 <h1>{{title}}</h1>
 <p>{{description}}</p>
 <ul>
-    <li *ngFor="let car of cars; let index = index;">{{index + 1}} - {{car}}
+    <li *ngFor="let car of cars; let index = index;">{{index + 1}} - {{car.brand }} {{car.model}} - {{car.color}} - <strong [ngClass]="
+        {
+            lowPrice : car.price < 5000,
+            medPrice : car.price < 9000 && car.price > 5000,
+            highPrice : car.price > 9000
+        }">{{car.price}}$</strong>  
         <button (click)="deleteCar(index)">Delete</button>
 
     </li>
