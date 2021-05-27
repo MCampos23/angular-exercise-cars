@@ -1,0 +1,15 @@
+<h1>{{title}}</h1>
+<p>{{description}}</p>
+<ul>
+    <li *ngFor="let car of cars; let index = index;">{{index + 1}} - {{car}}
+        <button (click)="deleteCar(index)">Delete</button>
+
+    </li>
+</ul>
+
+<input type="text" [(ngModel)]="newCar"> 
+<p>Add your favourite one:</p>
+<button (click)="addCar()">
+    Add
+</button> 
+<p>{{newCar}}</p>
