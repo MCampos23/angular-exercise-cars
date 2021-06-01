@@ -8,6 +8,7 @@ import { CarsComponent } from './cars/cars.component';
 import { ContactComponent } from './contact/contact.component';
 import { BikesComponent } from './bikes/bikes.component';
 import { BikesAlertsComponent } from './bikes-alerts/bikes-alerts.component';
+import { BikeDetailsComponent } from './bike-details/bike-details.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { BikesAlertsComponent } from './bikes-alerts/bikes-alerts.component';
     ContactComponent,
     BikesComponent,
     BikesAlertsComponent,
+    BikeDetailsComponent,
   
   ],
   imports: [

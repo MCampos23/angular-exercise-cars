@@ -1,7 +1,10 @@
 <h3>See our bikes catalog</h3>
 <div *ngFor="let bike of bikes">
   <p>
-    <a [title]="bike.name + ' details'">
+    <a
+      title="bike.name + ' details'"
+      routerLink="/bikes/{{bike.id}}"
+    >
       <strong>{{ bike.name }}</strong>
     </a>
   </p>
@@ -9,8 +12,5 @@
     {{ bike.description }}
   </p>
   <button (click)="share()">Share</button>
-  <app-bikes-alerts 
-  [bike]="bike"
-  (notify)="onNotify()"
-  > </app-bikes-alerts>
+  <app-bikes-alerts [bike]="bike" (notify)="onNotify()"> </app-bikes-alerts>
 </div>
