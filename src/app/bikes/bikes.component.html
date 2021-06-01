@@ -1,0 +1,16 @@
+<h3>See our bikes catalog</h3>
+<div *ngFor="let bike of bikes">
+  <p>
+    <a [title]="bike.name + ' details'">
+      <strong>{{ bike.name }}</strong>
+    </a>
+  </p>
+  <p *ngIf="bike.description">
+    {{ bike.description }}
+  </p>
+  <button (click)="share()">Share</button>
+  <app-bikes-alerts 
+  [bike]="bike"
+  (notify)="onNotify()"
+  > </app-bikes-alerts>
+</div>
